@@ -1,4 +1,7 @@
 # Anaconda 및 Miniconda 사용법
+## Conda 버전 확인
+- `conda -V`
+- `conda --version`
 
 ## 가상환경 생성
 ```
