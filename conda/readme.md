@@ -26,5 +26,5 @@ $ deactivate
 
 ## env 삭제
 ```
-$ conda env remove -n test_env
+$ conda env remove -n test_env -all
 ```
