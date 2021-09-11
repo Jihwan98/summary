@@ -16,12 +16,12 @@ $ conda env list
 
 ## env 활성화
 ```
-$ activate test_env
+$ conda activate test_env
 ```
 
 ## env 비활성화
 ```
-$ deactivate
+$ conda deactivate
 ```
 
 ## env 삭제
