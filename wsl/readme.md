@@ -8,7 +8,7 @@
 5. `$ sudo apt-get update`, `$ sudo apt-get upgrade`
 6. cmd나 anaconda prompt, miniconda prompt 등에서 bash 입력시 ubuntu 접속
 
-## wsl Ubuntu에서 Miniconda 사용하기
+## WSL Ubuntu에서 Miniconda 사용하기
 1. https://docs.conda.io/en/latest/miniconda.html 에서 다운링크 가져오기 (제일 최신것으로 하니까 에러나서 python3.8 버전으로 다운했음)
 2. wget [download link]
 3. 다운받은 파일 bash로 실행하기 `$ bash Mini~~`
