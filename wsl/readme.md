@@ -21,5 +21,5 @@
 wsl ubuntu 환경에서 jupyter notebook 실행 시, browser가 안뜨고 link 도 순식간에 넘어가는데 이를 해결 하는 방법
 ![캡처](https://user-images.githubusercontent.com/76936390/133366287-d0114418-ac5c-45cc-994a-618961578d49.PNG)
 
-## vs code
+## VS Code
 Remote-WSL 다운로드
