@@ -77,6 +77,11 @@ $ conda install ipykernel
 $ python -m ipykernel install --user --name=가상환경이름
 ```
 
+## kernel 목록 보기
+```
+$ jupyter kernelspec list
+```
+
 ## 제거하기
 ```
 $ jupyter kernelspec uninstall 가상환경이름
