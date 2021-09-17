@@ -29,6 +29,36 @@ $ conda deactivate
 $ conda env remove -n test_env
 ```
 
+## package install
+```
+$ conda install [~~]
+```
+채널을 이용하면
+```
+$ conda install -c conda-forge [~~]
+```
+
+## conda-forge 채널 추가하기
+```
+$ conda config --add channels conda-forge
+```
+
+
+## 등록된 채널 확인하기
+```
+$ conda config --show channels
+```
+
+## 가장 낮은 우선순위의 채널 추가
+```
+$ conda config --append channels {채널명}
+```
+
+## 채널 삭제
+```
+$ conda config --remove channels {채널명}
+```
+
 # jupyter notebook
 ## jupyter notebook install
 ```
