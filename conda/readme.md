@@ -62,12 +62,12 @@ $ conda config --remove channels {채널명}
 # jupyter notebook
 ## jupyter notebook install
 ```
-$ pip insatll jupyter
+$ conda insatll jupyter
 ```
 
 ## ipykernel (가상환경 별로 jupyter kernel에 연결시켜줘야함)
 ```
-$ pip install ipykernel
+$ conda install ipykernel
 ```
 ```
 $ python -m ipykernel install --user --name=가상환경이름
