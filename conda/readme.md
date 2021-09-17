@@ -5,13 +5,17 @@
 
 ## 가상환경 생성
 ```
-$ conda create -n test_env python=3.5
+$ conda create -n test_env python=3.8
 ```
 Python 3.5 버전의 'test_env'라는 이름으로 `env`를 생성
 
 ## env list 보기
 ```
 $ conda env list
+```
+or
+```
+$ conda info --envs
 ```
 
 ## env 활성화
