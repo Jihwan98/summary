@@ -17,6 +17,36 @@
 이후 가상환경을 만들고 pip 실행시 에러가 뜨는데, proxy 연결에 의한 에러?(warning?)로 보인다
 환경을 생성후 컴퓨터 자체를 껐다 켜면 문제없이 실행되고, sudo 권한으로 pip 진행하면 상관없이 실행된다 (ex: sudo pip install numpy) 
 
+## Xming을 이용해서 GUI Window 설정하기
+1. [https://sourceforge.net/projects/xming/] 에서 Xming 서버를 다운로드 받아 Windows에 설치한다.
+  (시작 프로그램 폴더 (시작 -> 실행 -> "shell:startup")에 Xming 단축 아이콘을 위치시켜 Windows 부팅시 자동으로 실행되도록 한다.)(?)
+2. Machine ID 생성
+  ```
+  $ sudo systemd-machine-id-setup
+  $ sudo dbus-uuidgen --ensure
+  ```
+  다음 명령으로 GUID가 올바르게 생성되었는지 확인한다.
+  ```
+  $ cat /etc/machine-id
+  ```
+3. X-Window 구성 요소 설치
+  ```
+  $ sudo apt-get install x11-apps xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic
+  ```
+4. 기본 디스플레이 포트 설정
+  ~/.bashrc 에 디스플레이 환경 변수를 다음과 같이 설정한다.
+  ```
+  $ vi ~/.bashrc
+  export DISPLAY=:0
+  ```
+  WSL Shell을 종료하고 다시 실행하거나, `$ source ~/.bashrc` 명령을 실행하여 변경된 환경 변수를 적용한다.
+5. 디스플레이 동작 확인
+  ```
+  $ xeyes
+  ```
+  ![image](https://user-images.githubusercontent.com/76936390/134667389-c607fa3d-1187-44f1-a980-1de845d646dd.png)
+
+  
 ## jupyter notebook
 wsl ubuntu 환경에서 jupyter notebook 실행 시, browser가 안뜨고 link 도 순식간에 넘어가는데 이를 해결 하는 방법
 ![캡처](https://user-images.githubusercontent.com/76936390/133366287-d0114418-ac5c-45cc-994a-618961578d49.PNG)
