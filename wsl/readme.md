@@ -20,20 +20,20 @@
 ## Xming을 이용해서 GUI Window 설정하기
 1. [https://sourceforge.net/projects/xming/] 에서 Xming 서버를 다운로드 받아 Windows에 설치한다.
   (시작 프로그램 폴더 (시작 -> 실행 -> "shell:startup")에 Xming 단축 아이콘을 위치시켜 Windows 부팅시 자동으로 실행되도록 한다.)(?)
-2. Machine ID 생성
-  `$ sudo systemd-machine-id-setup`
-  `$ sudo dbus-uuidgen --ensure`
-  다음 명령으로 GUID가 올바르게 생성되었는지 확인한다.
-  `$ cat /etc/machine-id`
-3. X-Window 구성 요소 설치
-  `$ sudo apt-get install x11-apps xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic`
-4. 기본 디스플레이 포트 설정
-  ~/.bashrc 에 디스플레이 환경 변수를 다음과 같이 설정한다.
-  `$ vi ~/.bashrc`
-  `export DISPLAY=:0`
-  WSL Shell을 종료하고 다시 실행하거나, `$ source ~/.bashrc` 명령을 실행하여 변경된 환경 변수를 적용한다.
-5. 디스플레이 동작 확인
-  `$ xeyes`
+2. Machine ID 생성  
+  `$ sudo systemd-machine-id-setup`  
+  `$ sudo dbus-uuidgen --ensure`  
+  다음 명령으로 GUID가 올바르게 생성되었는지 확인한다.  
+  `$ cat /etc/machine-id`  
+3. X-Window 구성 요소 설치  
+  `$ sudo apt-get install x11-apps xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic`  
+4. 기본 디스플레이 포트 설정  
+  ~/.bashrc 에 디스플레이 환경 변수를 다음과 같이 설정한다.  
+  `$ vi ~/.bashrc`  
+  `export DISPLAY=:0`  
+  WSL Shell을 종료하고 다시 실행하거나, `$ source ~/.bashrc` 명령을 실행하여 변경된 환경 변수를 적용한다.  
+5. 디스플레이 동작 확인  
+  `$ xeyes`  
   ![image](https://user-images.githubusercontent.com/76936390/134667389-c607fa3d-1187-44f1-a980-1de845d646dd.png)
 
   
