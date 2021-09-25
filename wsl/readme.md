@@ -19,7 +19,7 @@
 
 ## Xming을 이용해서 GUI Window 설정하기
 1. [https://sourceforge.net/projects/xming/] 에서 Xming 서버를 다운로드 받아 Windows에 설치한다.  
-  (시작 프로그램 폴더 (시작 -> 실행 -> "shell:startup")에 Xming 단축 아이콘을 위치시켜 Windows 부팅시 자동으로 실행되도록 한다.)(?)
+  (시작 프로그램 폴더 (시작 -> 실행 -> "shell:startup")에 Xming 단축 아이콘을 위치시켜 Windows 부팅시 자동으로 실행되도록 한다.)
 2. Machine ID 생성  
   `$ sudo systemd-machine-id-setup`  
   `$ sudo dbus-uuidgen --ensure`  
