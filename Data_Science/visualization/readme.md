@@ -45,6 +45,10 @@
   ```
   ![image](https://user-images.githubusercontent.com/76936390/111906495-1f4f0f80-8a94-11eb-86b7-c25439834945.png)
 
+  ### plt.subplot(231)
+  여러장 그리기 `plt.subplot( )` 이 편한것 같다.
+  
+  
   ### Set color
   - color 속성을 사용
   - flat -> 흑백, rgb color, predefined color 사용
