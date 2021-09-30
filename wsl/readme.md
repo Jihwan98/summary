@@ -9,7 +9,7 @@
 6. cmd나 anaconda prompt, miniconda prompt 등에서 bash 입력시 ubuntu 접속
 
 ## WSL Ubuntu에서 Miniconda 사용하기
-1. https://docs.conda.io/en/latest/miniconda.html 에서 다운링크 가져오기 (제일 최신것으로 하니까 에러나서 python3.8 버전으로 다운했음)
+1. [miniconda 다운 링크](ttps://docs.conda.io/en/latest/miniconda.html) 에서 다운링크 가져오기 (제일 최신것으로 하니까 에러나서 python3.8 버전으로 다운했음)
 2. wget [download link]
 3. 다운받은 파일 bash로 실행하기 `$ bash Mini~~`
 4. ubuntu 껐다 켜면 conda 활성화됨.
@@ -18,7 +18,7 @@
 환경을 생성후 컴퓨터 자체를 껐다 켜면 문제없이 실행되고, sudo 권한으로 pip 진행하면 상관없이 실행된다 (ex: sudo pip install numpy) 
 
 ## Xming을 이용해서 GUI X Window 설정하기
-1. [https://sourceforge.net/projects/xming/] 에서 Xming 서버를 다운로드 받아 Windows에 설치한다.  
+1. [다운링크](https://sourceforge.net/projects/xming/) 에서 Xming 서버를 다운로드 받아 Windows에 설치한다.  
   (시작 프로그램 폴더 (시작 -> 실행 -> "shell:startup")에 Xming 단축 아이콘을 위치시켜 Windows 부팅시 자동으로 실행되도록 한다.)
 2. Machine ID 생성  
   `$ sudo systemd-machine-id-setup`  
@@ -35,9 +35,8 @@
 5. 디스플레이 동작 확인  
   `$ xeyes`  
   ![image](https://user-images.githubusercontent.com/76936390/134667389-c607fa3d-1187-44f1-a980-1de845d646dd.png)
-
-----------------------
-|wsl2로 변경 후 위와 같은 방법으로 했을 경우 X window가 설정되지 않았다. 따라서 아래와 같이 해결하였다. 참고링크[https://evandde.github.io/wsl2-x/]
+  
+|wsl2로 변경 후 위와 같은 방법으로 했을 경우 X window가 설정되지 않았다. 따라서 아래와 같이 해결하였다. [참고링크](https://evandde.github.io/wsl2-x/)
 1. Xming 설치는 동일  
   Xming 단축 아이콘에서 속성-바로가기-대상 항목에 맨 끝에 한칸을 띄우고 -ac 를 입력  
   ![image](https://user-images.githubusercontent.com/76936390/135489811-7d935950-6a4e-4b0a-a164-9ad44cc03e1b.png)
