@@ -36,7 +36,7 @@
   `$ xeyes`  
   ![image](https://user-images.githubusercontent.com/76936390/134667389-c607fa3d-1187-44f1-a980-1de845d646dd.png)
   
-|wsl2로 변경 후 위와 같은 방법으로 했을 경우 X window가 설정되지 않았다. 따라서 아래와 같이 해결하였다. [참고링크](https://evandde.github.io/wsl2-x/)
+| wsl2로 변경 후 위와 같은 방법으로 했을 경우 X window가 설정되지 않았다. 따라서 아래와 같이 해결하였다. [참고링크](https://evandde.github.io/wsl2-x/)
 1. Xming 설치는 동일  
   Xming 단축 아이콘에서 속성-바로가기-대상 항목에 맨 끝에 한칸을 띄우고 -ac 를 입력  
   ![image](https://user-images.githubusercontent.com/76936390/135489811-7d935950-6a4e-4b0a-a164-9ad44cc03e1b.png)
