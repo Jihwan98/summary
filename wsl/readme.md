@@ -39,7 +39,7 @@
 ### wsl2로 변경 후 위와 같은 방법으로 했을 경우 X window가 설정되지 않았다. 따라서 아래와 같이 해결하였다. [참고링크](https://evandde.github.io/wsl2-x/)
 1. Xming 설치는 동일  
   Xming 단축 아이콘에서 속성-바로가기-대상 항목에 맨 끝에 한칸을 띄우고 -ac 를 입력  
-  ![image](https://user-images.githubusercontent.com/76936390/135489811-7d935950-6a4e-4b0a-a164-9ad44cc03e1b.png)
+  ![image](https://user-images.githubusercontent.com/76936390/135489811-7d935950-6a4e-4b0a-a164-9ad44cc03e1b.png)  
   Xming이 켜져있다면 종료하고 수정한 바로가기로 Xming을 실행해준다.
 2. windows powershell을 관리자 권한으로 실행 후 `Set-NetFirewallRule -DisplayName "Xming X Server" -Enabled True -Profile Any` 입력  
   Xming을 실행하지 않고 입력하면 에러가 뜨는데, 실행하고 나서도 에러가 뜬다면 `New-NetFirewallRule -DisplayName "Xming X Server" -Enabled True -Profile Any` 을 입력.
