@@ -17,7 +17,7 @@
 이후 가상환경을 만들고 pip 실행시 에러가 뜨는데, proxy 연결에 의한 에러?(warning?)로 보인다
 환경을 생성후 컴퓨터 자체를 껐다 켜면 문제없이 실행되고, sudo 권한으로 pip 진행하면 상관없이 실행된다 (ex: sudo pip install numpy) 
 
-## Xming을 이용해서 GUI Window 설정하기
+## Xming을 이용해서 GUI X Window 설정하기
 1. [https://sourceforge.net/projects/xming/] 에서 Xming 서버를 다운로드 받아 Windows에 설치한다.  
   (시작 프로그램 폴더 (시작 -> 실행 -> "shell:startup")에 Xming 단축 아이콘을 위치시켜 Windows 부팅시 자동으로 실행되도록 한다.)
 2. Machine ID 생성  
@@ -36,6 +36,18 @@
   `$ xeyes`  
   ![image](https://user-images.githubusercontent.com/76936390/134667389-c607fa3d-1187-44f1-a980-1de845d646dd.png)
 
+----------------------
+|wsl2로 변경 후 위와 같은 방법으로 했을 경우 X window가 설정되지 않았다. 따라서 아래와 같이 해결하였다. 참고링크[https://evandde.github.io/wsl2-x/]
+1. Xming 설치는 동일  
+  Xming 단축 아이콘에서 속성-바로가기-대상 항목에 맨 끝에 한칸을 띄우고 -ac 를 입력  
+  ![image](https://user-images.githubusercontent.com/76936390/135489811-7d935950-6a4e-4b0a-a164-9ad44cc03e1b.png)
+  Xming이 켜져있다면 종료하고 수정한 바로가기로 Xming을 실행해준다.
+2. windows powershell을 관리자 권한으로 실행 후 `Set-NetFirewallRule -DisplayName "Xming X Server" -Enabled True -Profile Any` 입력  
+  Xming을 실행하지 않고 입력하면 에러가 뜨는데, 실행하고 나서도 에러가 뜬다면 `New-NetFirewallRule -DisplayName "Xming X Server" -Enabled True -Profile Any` 을 입력.
+3. wsl에서 ~/.bashrc 에 디스플레이 환경 변수를 다음과 같이 설정한다.  
+  `export DISPLAY=$(cat /etc/resolv.conf |grep nameserver | awk '{print $2}'):0`
+  WSL Shell을 종료하고 다시 실행하거나, `$ source ~/.bashrc` 명령을 실행하여 변경된 환경 변수를 적용한다.
+4. `xeyes` 나 `xclock`을 통해 디스플레이 동작을 확인한다.
   
 ## jupyter notebook
 wsl ubuntu 환경에서 jupyter notebook 실행 시, browser가 안뜨고 link 도 순식간에 넘어가는데 이를 해결 하는 방법
