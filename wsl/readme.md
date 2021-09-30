@@ -44,7 +44,7 @@
 2. windows powershell을 관리자 권한으로 실행 후 `Set-NetFirewallRule -DisplayName "Xming X Server" -Enabled True -Profile Any` 입력  
   Xming을 실행하지 않고 입력하면 에러가 뜨는데, 실행하고 나서도 에러가 뜬다면 `New-NetFirewallRule -DisplayName "Xming X Server" -Enabled True -Profile Any` 을 입력.
 3. wsl에서 ~/.bashrc 에 디스플레이 환경 변수를 다음과 같이 설정한다.  
-  `export DISPLAY=$(cat /etc/resolv.conf |grep nameserver | awk '{print $2}'):0`
+  `export DISPLAY=$(cat /etc/resolv.conf |grep nameserver | awk '{print $2}'):0`  
   WSL Shell을 종료하고 다시 실행하거나, `$ source ~/.bashrc` 명령을 실행하여 변경된 환경 변수를 적용한다.
 4. `xeyes` 나 `xclock`을 통해 디스플레이 동작을 확인한다.
   
