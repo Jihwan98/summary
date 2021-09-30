@@ -41,8 +41,10 @@
   Xming 단축 아이콘에서 속성-바로가기-대상 항목에 맨 끝에 한칸을 띄우고 -ac 를 입력  
   ![image](https://user-images.githubusercontent.com/76936390/135489811-7d935950-6a4e-4b0a-a164-9ad44cc03e1b.png)  
   Xming이 켜져있다면 종료하고 수정한 바로가기로 Xming을 실행해준다.
-2. windows powershell을 관리자 권한으로 실행 후 `Set-NetFirewallRule -DisplayName "Xming X Server" -Enabled True -Profile Any` 입력  
-  Xming을 실행하지 않고 입력하면 에러가 뜨는데, 실행하고 나서도 에러가 뜬다면 `New-NetFirewallRule -DisplayName "Xming X Server" -Enabled True -Profile Any` 을 입력.
+2. windows powershell을 관리자 권한으로 실행 후   
+  `$ Set-NetFirewallRule -DisplayName "Xming X Server" -Enabled True -Profile Any` 입력    
+  Xming을 실행하지 않고 입력하면 에러가 뜨는데, 실행하고 나서도 에러가 뜬다면  
+  `$ New-NetFirewallRule -DisplayName "Xming X Server" -Enabled True -Profile Any` 을 입력.
 3. wsl에서 ~/.bashrc 에 디스플레이 환경 변수를 다음과 같이 설정한다.  
   `export DISPLAY=$(cat /etc/resolv.conf |grep nameserver | awk '{print $2}'):0`  
   WSL Shell을 종료하고 다시 실행하거나, `$ source ~/.bashrc` 명령을 실행하여 변경된 환경 변수를 적용한다.
