@@ -48,7 +48,9 @@
 3. wsl에서 ~/.bashrc 에 디스플레이 환경 변수를 다음과 같이 설정한다.  
   `export DISPLAY=$(cat /etc/resolv.conf |grep nameserver | awk '{print $2}'):0`  
   WSL Shell을 종료하고 다시 실행하거나, `$ source ~/.bashrc` 명령을 실행하여 변경된 환경 변수를 적용한다.
-4. `xeyes` 나 `xclock`을 통해 디스플레이 동작을 확인한다.
+4. `xeyes` 나 `xclock`을 통해 디스플레이 동작을 확인한다.  
+![image](https://user-images.githubusercontent.com/76936390/135491805-33c2f7f3-f6cf-4bc2-94e5-8a73a4c4be07.png)
+
   
 ## jupyter notebook
 wsl ubuntu 환경에서 jupyter notebook 실행 시, browser가 안뜨고 link 도 순식간에 넘어가는데 이를 해결 하는 방법
