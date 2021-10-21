@@ -6,7 +6,7 @@
 3. 다운받은 Ubuntu 실행
 4. 아이디와 비밀번호 생성해주면 끝.
 5. `$ sudo apt-get update`, `$ sudo apt-get upgrade`
-6. cmd나 anaconda prompt, miniconda prompt 등에서 bash 입력시 ubuntu 접속
+6. cmd나 anaconda prompt, miniconda prompt 등에서 bash 또는 wsl 입력시 ubuntu 접속
 
 ## WSL Ubuntu에서 Miniconda 사용하기
 1. [miniconda 다운 링크](ttps://docs.conda.io/en/latest/miniconda.html) 에서 다운링크 가져오기 (제일 최신것으로 하니까 에러나서 python3.8 버전으로 다운했음)
