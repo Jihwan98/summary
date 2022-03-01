@@ -22,5 +22,10 @@ $ git push -u origin main
 `$ git branch`  
 - 원격 저장소 목록  
 `$ git remote -v`  
-- 원격 저장소 삭제
+- 원격 저장소 삭제  
 `$ git remote rm origin`  
+
+## 각종 에러 상황
+- fatal: refusing to merge unrelated histories [관련 블로그 링크](https://gdtbgl93.tistory.com/63)  
+`git pull origin 브랜치명 --allow-unrelated-histories`  
+`--allow-unrelated-histories` 이 명령 옵션은 이미 존재하는 두 프로젝트의 기록(history)을 저장하는 드문 상황에 사용된다고 한다. 즉, git에서는 서로 관련 기록이 없는 이질적인 두 프로젝트를 병합할 때 기본적으로 거부하는데, 이를 허용해 주는 것이다.
