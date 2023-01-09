@@ -33,6 +33,11 @@ $ conda deactivate
 $ conda env remove -n test_env
 ```
 
+## env 복사
+```
+$ conda create -n test_env_clone --clone test_env
+```
+
 ## package install
 ```
 $ conda install [~~]
