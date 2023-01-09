@@ -38,6 +38,18 @@ $ conda env remove -n test_env
 $ conda create -n test_env_clone --clone test_env
 ```
 
+## env 내보내기
+가상환경 실행 후 -> yaml 파일 생성
+```
+$ conda env export > test_env.yaml
+```
+
+## env 가져오기
+yaml 파일이 있는 경로에서 실행
+```
+$ conda env create -f test_env.yaml
+```
+
 ## package install
 ```
 $ conda install [~~]
